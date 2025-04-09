@@ -5,8 +5,8 @@
 
 ## ✨ Estudiante
 
-- **Nombre:** Gastón Jacinto
-- **Comisión:** M2025-03 _[Modificar con su comisión, donde 7 es el número de comisión]_
+- **Nombre:** Jacinto, Gastón
+- **Comisión:** M2025-03
 
 ## 📂 Descripción del Repositorio
 
