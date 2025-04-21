@@ -1,7 +1,14 @@
+# Esto es para que Python me permita importar la funcion "menu" desde otro archivo, por la forma en la que esta estructurado el proyecto.
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+#-----------Common imports-------------
 import random
 from statistics import mean, median, mode
 import datetime 
 import re
+
+from utils.utils import menu
 
 def camelCaseAOracion(text: str) -> str:
     # Un espacio entre cada palabra
@@ -172,35 +179,7 @@ class tp3Controller:
 
 
 def main():
-  ctrl = tp3Controller()
-  opciones = {
-          1: ctrl.esMayorDeEdad,
-          2: ctrl.aprobado,
-          3: ctrl.esPar,
-          4: ctrl.edadYCategoria,
-          5: ctrl.longitudDeContraseña,
-          6: ctrl.calcularSesgo,
-          7: ctrl.terminaConVocal,
-          8: ctrl.opcionesNombre,
-          9: ctrl.magnitudTerremoto,
-          10: ctrl.determinarEstaciones,
-      }
-
-# Un compañero me mostró este menú, me pareció bueno, asi que decidí implementarlo también pero con algunos cambios.
-  eleccion = 1
-  while eleccion != 0:
-    print("------------------OPIONES------------------")
-    for opcion in opciones:
-      print(f"{opcion} - {camelCaseAOracion(opciones[opcion].__name__)}")
-    print("-------------------------------------------")
-
-    eleccion = int(input(f"Elegí un método. Usa 0 para salir: "))
-    if eleccion in opciones:
-      opciones[eleccion]()
-
-    elif eleccion != 0:
-      print("Método no encontrado")
-
+  menu(tp3Controller())
 if __name__ == "__main__":
      main()
 
