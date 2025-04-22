@@ -9,12 +9,6 @@ import datetime
 import re
 
 from utils.utils import menu
-
-def camelCaseAOracion(text: str) -> str:
-    # Un espacio entre cada palabra
-    words = re.sub(r'(?<!^)(?=[A-Z])', ' ', text).lower()
-    # Mayúscula a la primera letra
-    return words.capitalize()
 class tp3Controller:
   def esMayorDeEdad(self):
     #Ejercicio 1
